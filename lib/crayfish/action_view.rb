@@ -24,6 +24,7 @@ module Crayfish
   module ActionView
 
     def render *args
+      @branch_level ||= nil
       if @branch_level
         @branch_level += 1
         if @options[:html]

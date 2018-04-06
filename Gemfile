@@ -17,4 +17,4 @@ gem "jquery-rails"
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'nokogiri'
-gem 'prawn', :git => 'git://github.com/teknobingo/prawn.git', :branch => 'master'
+gem 'prawn'

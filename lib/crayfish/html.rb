@@ -82,14 +82,14 @@ module Crayfish
 
       search_paths = [::Rails.public_path] + ::Rails.configuration.assets.paths
       search_paths.each do |search_path|
-        if File.exists?("#{search_path}/#{path}")
+        if File.exist?("#{search_path}/#{path}")
           return "#{search_path}/#{path}"
         end
       end
 
       if /^\/assets\/(?<path>.*)$/ =~ path
         search_paths.each do |search_path|
-          if File.exists?("#{search_path}/#{path}")
+          if File.exist?("#{search_path}/#{path}")
             return "#{search_path}/#{path}"
           end
         end
